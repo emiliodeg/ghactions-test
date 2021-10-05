@@ -1,7 +1,7 @@
 <input type="number" step="1" [(ngModel)]="initialValue" />
 
 <div *ngIf="initialValue">
-  <h2>Collatz secuency for {{ this.initialValue }} is:</h2>
+  <h2>Collatz secuency for |{{ this.initialValue }}| is:</h2>
 
   <p>{{ secuency.join(', ') }}</p>
 </div>

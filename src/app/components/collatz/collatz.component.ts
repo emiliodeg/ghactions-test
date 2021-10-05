@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-collatz',
@@ -13,7 +13,7 @@ export class CollatzComponent {
       return [];
     }
 
-    let value = this.initialValue;
+    let value = Math.abs(this.initialValue);
     const result = [value];
 
     while (value !== 1) {
