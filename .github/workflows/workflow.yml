@@ -15,14 +15,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2.3.4
 
       - name: Install and build
         working-directory: ./ghactions-test
-        run: npm i && npm run build:github && cp dist/ghactions-test/index.html dist/ghactions-test/404.html
+        run: npm i && npm run build:github
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: ghactions-test/dist/ghactions-test
