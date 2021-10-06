@@ -21,6 +21,9 @@ jobs:
         working-directory: ./
         run: npm i && npm run build:github
 
+      - name: Test
+        run: npm run test:ci
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
